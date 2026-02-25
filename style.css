@@ -2,15 +2,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100dvh; 
+  min-height: 100vh;
   font-family: Arial, sans-serif;
   background: url("background.png") no-repeat center center;
   background-size: cover;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 /* Background subtle movement */
@@ -25,8 +22,9 @@ html, body {
   background: rgba(0,0,0,0.7);
   padding: 20px;
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  margin: 20px auto; 
   text-align: center;
 }
 
