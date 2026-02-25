@@ -75,3 +75,10 @@ input[type=range] {
   width: 100%;
   touch-action: none;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
