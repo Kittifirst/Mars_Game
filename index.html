@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mission Mars - Oxygen Factory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🌱 Mission Mars</h1>
+
+    <div class="slider-group">
+        <label>Light Intensity (%)</label>
+        <input type="range" id="light" min="0" max="100" value="50">
+        <span id="lightVal">50</span>%
+    </div>
+
+    <div class="slider-group">
+        <label>CO₂ Level (%)</label>
+        <input type="range" id="co2" min="0" max="100" value="50">
+        <span id="co2Val">50</span>%
+    </div>
+
+    <div class="slider-group">
+        <label>Water Supply (%)</label>
+        <input type="range" id="water" min="0" max="100" value="50">
+        <span id="waterVal">50</span>%
+    </div>
+
+    <button onclick="runSimulation()">ทดลอง</button>
+
+    <div class="results">
+        <h2 id="efficiency">Efficiency: -- %</h2>
+        <h3 id="oxygen">O₂ Production: -- bubbles/min</h3>
+        <p id="analysis"></p>
+    </div>
+
+    <canvas id="myChart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

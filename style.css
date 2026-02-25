@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 20px;
+  width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.slider-group {
+  margin-bottom: 20px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  background: #00ff88;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00cc66;
+}
+
+canvas {
+  margin-top: 20px;
+}
