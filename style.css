@@ -2,14 +2,15 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+  height: 100dvh; 
   font-family: Arial, sans-serif;
   background: url("background.png") no-repeat center center;
   background-size: cover;
   color: white;
-  overscroll-behavior: none;
-  animation: bgMove 25s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 /* Background subtle movement */
@@ -24,11 +25,9 @@ html, body {
   background: rgba(0,0,0,0.7);
   padding: 20px;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
   max-width: 600px;
-  margin: 20px auto;
   text-align: center;
-  animation: fadeIn 1s ease-in-out;
 }
 
 /* Fade In */
