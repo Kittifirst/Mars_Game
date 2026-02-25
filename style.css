@@ -3,11 +3,20 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   background: url("background.png") no-repeat center center;
   background-size: cover;
   color: white;
   overscroll-behavior: none;
+  animation: bgMove 25s linear infinite;
+}
+
+/* Background subtle movement */
+@keyframes bgMove {
+  0% { background-position: center top; }
+  50% { background-position: center bottom; }
+  100% { background-position: center top; }
 }
 
 /* ===== Main Container ===== */
@@ -19,6 +28,13 @@ html, body {
   max-width: 600px;
   margin: 20px auto;
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Slider Group ===== */
@@ -26,7 +42,7 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* ===== Range Slider (Fix All Browser Bugs) ===== */
+/* ===== Range Slider ===== */
 input[type=range] {
   appearance: none;
   -webkit-appearance: none;
@@ -38,14 +54,14 @@ input[type=range] {
   touch-action: none;
 }
 
-/* Track - Chrome / Safari */
+/* Track - Chrome/Safari */
 input[type=range]::-webkit-slider-runnable-track {
   height: 8px;
   background: #444;
   border-radius: 5px;
 }
 
-/* Thumb - Chrome / Safari */
+/* Thumb - Chrome/Safari */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 20px;
@@ -54,6 +70,13 @@ input[type=range]::-webkit-slider-thumb {
   background: #00ff88;
   cursor: pointer;
   margin-top: -6px;
+  transition: 0.2s;
+  box-shadow: 0 0 8px #00ff88;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #00ff88, 0 0 25px #00ff88;
 }
 
 /* Track - Firefox */
@@ -82,10 +105,14 @@ button {
   font-size: 16px;
   background: #00ff88;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ff88;
 }
 
 button:hover {
   background: #00cc66;
+  box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+  transform: scale(1.05);
 }
 
 /* ===== Canvas ===== */
@@ -96,7 +123,6 @@ canvas {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 600px) {
-
   h1 {
     font-size: 20px;
   }
@@ -110,16 +136,4 @@ canvas {
     padding: 14px;
     font-size: 18px;
   }
-}
-
-input[type=range] {
-  appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
