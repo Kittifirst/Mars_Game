@@ -56,3 +56,13 @@ function updateChart(L, C, W) {
   });
 }
 
+document.querySelectorAll("input[type=range]").forEach(slider => {
+  slider.addEventListener("touchstart", function(e) {
+    e.stopPropagation();
+  }, { passive: false });
+
+  slider.addEventListener("touchmove", function(e) {
+    e.stopPropagation();
+  }, { passive: false });
+});
+
