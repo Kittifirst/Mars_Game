@@ -66,3 +66,21 @@ document.querySelectorAll("input[type=range]").forEach(slider => {
   }, { passive: false });
 });
 
+const button = document.querySelector("button");
+
+button.addEventListener("click", function(e) {
+  const circle = document.createElement("span");
+  const diameter = Math.max(this.clientWidth, this.clientHeight);
+  const radius = diameter / 2;
+
+  circle.style.width = circle.style.height = `${diameter}px`;
+  circle.style.left = `${e.offsetX - radius}px`;
+  circle.style.top = `${e.offsetY - radius}px`;
+
+  this.appendChild(circle);
+
+  setTimeout(() => {
+    circle.remove();
+  }, 600);
+});
+
