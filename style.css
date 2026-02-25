@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background: url("background.png") no-repeat center center fixed;
+  background: url("background.png") no-repeat center center;
   background-size: cover;
   color: white;
   overscroll-behavior: none;
@@ -110,4 +110,16 @@ canvas {
     padding: 14px;
     font-size: 18px;
   }
+}
+
+input[type=range] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
