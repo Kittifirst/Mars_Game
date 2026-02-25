@@ -158,28 +158,3 @@ button span {
 input[type=range]:active::-webkit-slider-thumb {
   box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
 }
-
-.shooting-star {
-  position: fixed;
-  top: -50px;
-  left: -100px;
-  width: 2px;
-  height: 100px;
-  background: linear-gradient(white, transparent);
-  transform: rotate(45deg);
-  animation: shoot 5s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes shoot {
-  0% {
-    top: -50px;
-    left: -100px;
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    left: 100%;
-    opacity: 0;
-  }
-}
