@@ -55,3 +55,4 @@ function updateChart(L, C, W) {
     }
   });
 }
+
